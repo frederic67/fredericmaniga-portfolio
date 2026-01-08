@@ -195,9 +195,6 @@ export default function HomePage() {
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Button href="/contact">Discuter de votre MVP</Button>
-                  <Button href="/services" variant="secondary">
-                    Voir le détail des services
-                  </Button>
                 </div>
               </div>
             </Card>

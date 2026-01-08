@@ -6,7 +6,6 @@ import Button from "@/components/Button";
 import { usePathname } from "next/navigation";
 
 const nav = [
-  { href: "/services", label: "Services" },
   { href: "/work", label: "Projets" },
   { href: "/pricing", label: "Tarifs" },
   { href: "/about", label: "À propos" },

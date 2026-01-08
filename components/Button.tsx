@@ -11,6 +11,7 @@ type Props = {
   type?: "button" | "submit";
   showArrow?: boolean;
   target?: string;
+  disabled?: boolean;
 };
 
 export default function Button({
@@ -22,6 +23,7 @@ export default function Button({
   type = "button",
   showArrow = false,
   target,
+  disabled = false,
 }: Props) {
   // Bouton principal : gradient selon la maquette exacte (135deg, point à 45%)
   const primary = cn(
@@ -49,7 +51,10 @@ export default function Button({
     className
   );
 
-  const cls = variant === "primary" ? primary : secondary;
+  const cls = cn(
+    variant === "primary" ? primary : secondary,
+    disabled && "opacity-50 cursor-not-allowed pointer-events-none"
+  );
   
   // Style inline pour le gradient exact (135deg avec point à 45%)
   const gradientStyle = variant === "primary" ? {
@@ -84,7 +89,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={cls} style={gradientStyle}>
+    <button type={type} onClick={onClick} className={cls} style={gradientStyle} disabled={disabled}>
       {content}
     </button>
   );
