@@ -2,6 +2,7 @@ import Container from "@/components/Container";
 import Card from "@/components/Card";
 import Badge from "@/components/Badge";
 import Button from "@/components/Button";
+import Image from "next/image";
 
 export default function WorkPage() {
   return (
@@ -108,28 +109,18 @@ export default function WorkPage() {
                 </div>
               </div>
 
-              {/* Placeholder visuel (image plus tard) */}
+              {/* Image du projet Docksy */}
               <div className="relative">
                 <div className="absolute -inset-6 rounded-3xl bg-accent/10 blur-2xl" />
-                <div className="relative overflow-hidden rounded-3xl border border-white/[0.10] bg-white/[0.03] p-6 backdrop-blur-md">
-                  <div className="mb-4 flex items-center justify-between">
-                    <p className="text-sm font-semibold">Aperçu</p>
-                    <span className="text-xs text-muted">Dashboard</span>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="h-10 w-full rounded-2xl border border-white/[0.10] bg-white/[0.03]" />
-                    <div className="h-28 w-full rounded-2xl border border-white/[0.10] bg-white/[0.03]" />
-                    <div className="grid grid-cols-3 gap-3">
-                      <div className="h-16 rounded-2xl border border-white/[0.10] bg-white/[0.03]" />
-                      <div className="h-16 rounded-2xl border border-white/[0.10] bg-white/[0.03]" />
-                      <div className="h-16 rounded-2xl border border-white/[0.10] bg-white/[0.03]" />
-                    </div>
-                  </div>
-
-                  <p className="mt-4 text-xs text-muted">
-                    (Image/vidéo du dashboard à intégrer plus tard.)
-                  </p>
+                <div className="relative overflow-hidden rounded-3xl border border-white/[0.10] bg-white/[0.03] backdrop-blur-md">
+                  <Image
+                    src="/Docksy.png"
+                    alt="Dashboard Docksy - Application de gestion logistique"
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
               </div>
             </div>
